@@ -15,7 +15,7 @@ public class Lab {
      * @return the length of arr.
      */
     public int getLengthOfArray(int[] arr){
-        return 0;
+        return arr.length;
     }
 
 
@@ -27,7 +27,7 @@ public class Lab {
      * @return the element at index n of arr.
      */
     public int getNthElementOfArray(int[] arr, int n){
-        return 0;
+        return arr[n];      // Aside: .at() array method in JavaScript, C++ works, Java do NOT seem to have
     }
 
     /**
@@ -38,8 +38,9 @@ public class Lab {
      * @param val the value that we will assign to a spot in the array.
      * @return nothing. Because of pass-by-reference, any change to the array will be reflected across our java program.
      */
-    public void setNthElementOfArray(int[] arr, int n, int val){
-
+    public void setNthElementOfArray(int[] arr, int n, int val){    // method w/ type "void" -- no return
+        // change value at 'n' index in array 'arr' to 'val'
+        arr[n] = val;
     }
 
     /**
@@ -47,6 +48,9 @@ public class Lab {
      * @return a new int array that can contain n elements.
      */
     public int[] returnNewArraySizeN(int n){
-        return null;
+        // initialize an array w/ length of n & type int -- the two characteristics determined on initialzation & can NOT be changed
+        int ary[] = new int[n];
+        // int[n] ary;   // do NOT work but empty w/ empty length will
+        return ary;
     }
 }
